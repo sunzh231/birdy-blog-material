@@ -1,0 +1,73 @@
+body {
+  font: 10px sans-serif;
+}
+
+ul li {
+	list-style: none;
+	float: left;
+	margin-left: 20px;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+  shape-rendering: crispEdges;
+}
+
+svg {
+  font: 10px sans-serif;
+  shape-rendering: crispEdges;
+}
+
+.chart rect {
+  fill: #edf4f8;
+}
+
+.inner_line .tick text {
+  display: none;
+}
+
+.cpu_chart{
+  position: relative;
+}
+.disk_chart{
+  position: relative;
+}
+
+.network_chart{
+  position: relative;
+}
+
+.chart_options {
+  position: absolute;
+  width: 165px;
+  height: 200px;
+  left: -50px;
+  top: 0px;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: black;
+  shape-rendering: crispEdges;
+}
+
+.inner_line path,
+.inner_line line {
+  fill: none;
+  stroke: #E7E7E7;
+  shape-rendering: crispEdges;
+}
+
+.tiptools
+{
+  display: block;
+  background-color: #FFF;
+  border: 1px solid #E7E7E7;
+  padding: 10px;
+  font-size: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}

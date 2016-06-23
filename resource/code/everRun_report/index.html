@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="app/css/style.css">
+<body>
+<div id="globalOptions"></div>
+
+<div class="cpu_chart">
+	<div class="chart_options">
+		<ul>
+			<li><input type="checkbox" checked="checked" class="chooseLineGroup" value="cpu"/> <label>CPU</label></li>
+		</ul>
+	</div>
+</div>
+<div class="disk_chart">
+	<div class="chart_options">
+		<ul>
+			<li><input type="checkbox" checked="checked" class="chooseLineGroup" value="Disk_R" /> <label>Disk Read</label></li>
+			<li><input type="checkbox" checked="checked" class="chooseLineGroup" value="Disk_W" /> <label>Disk Write</label></li>
+		</ul>
+	</div>
+</div>
+<div class="network_chart">
+	<div class="chart_options">
+		<ul>
+			<li><input type="checkbox" checked="checked" class="chooseLineGroup" value="Net_R"/> <label>Network Read</label></li>
+			<li><input type="checkbox" checked="checked" class="chooseLineGroup" value="Net_W" /> <label>Network Write</label></li>
+		</ul>
+	</div>
+</div>
+
+<script type="text/dust" id="globalOptionsTemplate">
+	<span>physical Machines：</span>
+	<ul>
+		{#physicalMachines}
+			<li><input type="checkbox" checked="checked" class="chooseMachine" value={name} /> <label>{name}</label></li>
+		{/physicalMachines}
+	</ul></br></br>
+	<span>virtual Machines：</span>
+	<ul>
+		{#virtualMachines}
+			<li><input type="checkbox" checked="false" class="chooseMachine" value={name} /> <label>{name}</label></li>
+		{/virtualMachines}
+	</ul></br></br>
+</script>
+
+	
+<script type="text/javascript" src="assets/jquery-1.9.1.min.js"></script>
+<script src="assets/d3/d3.min.js"></script>
+<script type="text/javascript" src="node_modules/dustjs-linkedin/dist/dust-full.js"></script>
+<script type="text/javascript" src="node_modules/dustjs-helpers/dist/dust-helpers.js"></script>
+<script type="text/javascript" src="app/js/chart.js"></script>
+<script src="app/js/app.js"></script>
+
+
+
+
+
+
